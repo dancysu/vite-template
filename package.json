@@ -10,11 +10,13 @@
     "format": "prettier --write \"./**/*.{html,css,ts,js,json,md,vue}\"",
     "lint": "eslint src/**/*.{ts,vue} --cache --fix",
     "prepare": "husky install",
-    "commitlint": "commitlint --config commitlint.config.js -e -V"
+    "commitlint": "commitlint --config commitlint.config.js -e -V",
+    "lint:css": "stylelint **.{vue,scss} --fix"
   },
   "dependencies": {
     "axios": "^1.7.9",
     "element-plus": "^2.9.1",
+    "normalize.css": "^8.0.1",
     "pinia": "^2.3.0",
     "vue": "^3.5.13",
     "vue-router": "4"
@@ -31,13 +33,20 @@
     "globals": "^15.13.0",
     "husky": "^8.0.0",
     "lint-staged": "^15.2.11",
+    "mockjs": "^1.1.0",
     "prettier": "3.4.2",
     "sass": "^1.83.0",
+    "stylelint": "^16.11.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-config-standard-scss": "^14.0.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-scss": "^6.10.0",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.0",
     "unplugin-auto-import": "^0.19.0",
     "unplugin-vue-components": "^0.27.5",
     "vite": "^6.0.1",
+    "vite-plugin-mock": "^3.0.2",
     "vue-tsc": "^2.1.10"
   },
   "lint-staged": {
