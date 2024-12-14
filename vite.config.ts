@@ -26,5 +26,14 @@ export default defineConfig({
     Components({
       resolvers: [ElementPlusResolver()]
     })
-  ]
+  ],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000', // 后端服务器地址
+        changeOrigin: true, // 是否改变请求头中的Origin字段
+        rewrite: (path) => path.replace(/^\/api/, '') // 重写请求路径
+      }
+    }
+  }
 })
